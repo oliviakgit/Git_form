@@ -1,0 +1,91 @@
+h1{
+    color: pink;
+    font-weight: bold;
+}
+
+input[type="email"]{
+    background-color: pink;
+    border: 3px solid blueviolet;
+}
+
+*{
+    box-sizing; border-box;
+}
+
+body{
+padding: 30px 30%;
+}
+
+form{
+    font-size: 1 rem;
+    color: black;
+    background-color: lightpink;
+}
+
+form label, form legend{
+    overflow: hidden;
+    float: left;
+    font-size: 1 rem;
+}
+
+form legend, form label{
+    width: 25%;
+}
+
+form div{
+    overflow: hidden;
+}
+
+form > div > fieldset{
+border: 0;
+padding: 0;
+}
+
+form > div > fieldset > div > label{
+font-size: 0.9 rem;
+color: crimson;
+}
+
+form textarea{
+    width: 100%;
+}
+
+form > div > textarea{
+    width: 50%;
+    float: left;
+    margin-left: 0;
+}
+.cities > div > input{
+    width: auto;
+    float: left;
+}
+
+input[type="submit"]{
+    margin: auto;
+}
+
+form input: focus{
+    border: 3px;
+}
+
+form input, textarea{
+    background-color: fuchsia;
+}
+
+#sendForm{
+    background-color: lightskyblue;
+    font-size: 1.5 rem;
+    font-weight: bold;
+    width: 100px;
+    height: 40px;
+    display: black;
+    margin: 0 auto;
+}
+
+#sendForm:hover{
+    transition: background-color 0.5s linear 0.1s;
+    background-color: lightcoral; 
+    border: lightslategray;
+    border-radius: 5px;
+}
+

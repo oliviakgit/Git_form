@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form1</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Przykładowy formularz</h1>
+
+    <div class="form1">
+      <form>
+        <div>
+          <label class="description" id="field1" for="field1" required>
+            Podaj imię i nazwisko:
+          </label>
+          <input type="text" id="field1" name="field1" required />
+        </div>
+
+        <div>
+          <label class="description" id="field2" for="field2" required>
+            Podaj hasło:
+          </label>
+          <input
+            type="password"
+            id="field2"
+            name="field2"
+            title="Minimum 1 cyfra i jeden znak duży i jeden mały, min 8 znaków"
+            pattern="(?"
+            =".*\d)(?"
+            =".*[a-z])(?"
+            =".*[A-Z]).{8,}"
+            required
+          />
+        </div>
+        <!--walidacja hasła-->
+
+        <div>
+          <label class="description" id="title3" for="field3" required>
+            Podaj email:
+          </label>
+          <input type="email" id="field3" name="field3" required />
+        </div>
+
+        <div>
+          <label class="description" id="age" for="age"
+            >Ile masz lat doświadczenia?</label
+          >
+          <input
+            type="range"
+            name="age"
+            id="age"
+            size="3"
+            min="1"
+            max="10"
+            value="5"
+          />
+        </div>
+
+        <div>
+          <label class="description" id="title4" for="field4">
+            Opisz swój problem
+          </label>
+        </div>
+        <div>
+          <textarea
+            name="field4"
+            id="field4"
+            cols="50"
+            rows="5"
+            spellcheck="true"
+          >
+                Hej, mój problem to...
+            </textarea
+          >
+        </div>
+
+        <div>
+          <fieldset>
+            <legend id="title5" class="description">Wybierz sport:</legend>
+            <div>
+              <input
+                type="radio"
+                id="radio_0"
+                name="radio"
+                value="default"
+                checked="checked"
+              />
+              <label class="choice" id="title6_0" for="field6_0">
+                Nie interesują mnie sporty
+              </label>
+
+              <input type="radio" id="radio_1" name="radio" value="Skiing" />
+              <label class="choice" id="title6_1" for="field6_1">
+                Narciarstwo
+              </label>
+
+              <input type="radio" id="radio_2" name="radio" value="Snowboard" />
+              <label class="choice" id="title6_2" for="field6_2">
+                Snowboard
+              </label>
+
+              <input
+                type="radio"
+                id="radio_3"
+                name="radio"
+                value="Nordic_walking"
+              />
+              <label class="choice" id="title6_3" for="field6_3">
+                Nordic walking
+              </label>
+
+              <!-- kiedy name jest taki sam, wtedy można wybrać tylko jedną opcję -->
+            </div>
+          </fieldset>
+        </div>
+
+        <div>
+          <fieldset class="cities">
+            <legend id="title7" class="description">
+              Twoje ulubione miasta
+            </legend>
+            <div>
+              <input
+                type="checkbox"
+                name="field5"
+                id="checkbox_0"
+                value="Warsaw"
+              />
+              <label class="choice" id="checkbox_0" for="checkbox_0"
+                >Warszawa</label
+              >
+
+              <input
+                type="checkbox"
+                name="field6"
+                id="checkbox_1"
+                value="Poznan"
+              />
+              <label class="choice" id="checkbox_1" for="checkbox_1"
+                >Poznań</label
+              >
+
+              <input
+                type="checkbox"
+                name="field7"
+                id="checkbox_2"
+                value="Wroclaw"
+              />
+              <label class="choice" id="checkbox_2" for="checkbox_2"
+                >Wrocław</label
+              >
+
+              <input
+                type="checkbox"
+                name="field8"
+                id="checkbox_3"
+                value="Gdansk"
+              />
+              <label class="choice" id="checkbox_3" for="checkbox_3"
+                >Gdańsk</label
+              >
+            </div>
+          </fieldset>
+        </div>
+
+        <div>
+          <label class="description" id="title8" for="field8"
+            >Wybierz swój ulubiony gatunek muzyczny</label
+          >
+          <select
+            name="music"
+            id="music"
+            title="Wybierz rodzaj muzyki"
+            required
+          >
+            <option value="jazz">Jazz</option>
+            <option value="klasyczna">Klasyczna</option>
+            <option value="rock">Rock</option>
+            <option value="dance">Dance</option>
+          </select>
+        </div>
+
+        <div>
+          <input
+            type="submit"
+            name="sendForm"
+            id="sendForm"
+            value="Prześlij formularz"
+          />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
